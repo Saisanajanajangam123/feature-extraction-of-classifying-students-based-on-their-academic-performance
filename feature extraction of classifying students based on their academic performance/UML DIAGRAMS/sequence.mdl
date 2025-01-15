@@ -1,0 +1,728 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5E67DAAC0219"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5E67DAAC021B"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5E67DAAC0243"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5E67DAAC021A"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5E67DAAC021C"
+	logical_models 	(list unit_reference_list
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "User"
+			quid       	"5E67DAC200F5"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5E67DAD70212"
+				supplier   	"Application"
+				quidu      	"5E67DACA030B"
+				messages   	(list Messages
+				    (object Message "Upload Dataset"
+					quid       	"5E67DAD70213"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "Generate Training Model"
+					quid       	"5E67DAE50302"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "Feature Extraction"
+					quid       	"5E67DB28020A"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2)
+				    (object Message "Run SVM Algorithm"
+					quid       	"5E67DB3603AA"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3)
+				    (object Message "Run Random Forest Tree Algorithm"
+					quid       	"5E67DB43024A"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	4)
+				    (object Message "Run Dession Tree Algorithm"
+					quid       	"5E67DB56025B"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	5)
+				    (object Message "Run Gradient Boosting Algorithm"
+					quid       	"5E67DB66035B"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	6)
+				    (object Message "classify Student performance Reason"
+					quid       	"5E67DB7903D2"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	7)
+				    (object Message "view Accuracy Graph"
+					quid       	"5E67DBC002DA"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	8))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Application"
+			quid       	"5E67DACA030B"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5E67DAAC0220"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object InteractionDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5E67DABF00FD"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	244
+		items      	(list diagram_item_list
+		    (object InterObjView "User" @2
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67DAC200F5"
+			width      	300
+			height     	1713
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @3
+			    location   	(448, 368)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @4
+			    location   	(448, 528)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(448, 688)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(448, 864)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @7
+			    location   	(448, 1072)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @8
+			    location   	(448, 1216)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @9
+			    location   	(448, 1392)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @10
+			    location   	(448, 1568)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @11
+			    location   	(448, 1728)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Application" @12
+			location   	(1328, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(1328, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67DACA030B"
+			width      	300
+			height     	1713
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @13
+			    location   	(1328, 368)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @14
+			    location   	(1328, 528)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
+			    location   	(1328, 688)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			    location   	(1328, 864)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @17
+			    location   	(1328, 1072)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			    location   	(1328, 1216)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @19
+			    location   	(1328, 1392)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(1328, 1568)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(1328, 1728)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterMessView "" @22
+			location   	(0, 368)
+			label      	(object SegLabel @23
+			    Parent_View 	@22
+			    location   	(888, 324)
+			    quidu      	"5E67DAD70213"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	281
+			    justify    	0
+			    label      	"Upload Dataset"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@3
+			Focus_Entry 	@13
+			origin     	(464, 368)
+			terminus   	(1312, 368)
+			ordinal    	0)
+		    (object InterMessView "" @24
+			location   	(0, 528)
+			label      	(object SegLabel @25
+			    Parent_View 	@24
+			    location   	(888, 484)
+			    quidu      	"5E67DAE50302"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	444
+			    justify    	0
+			    label      	"Generate Training Model"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@4
+			Focus_Entry 	@14
+			origin     	(464, 528)
+			terminus   	(1312, 528)
+			ordinal    	1)
+		    (object InterMessView "" @26
+			location   	(0, 688)
+			label      	(object SegLabel @27
+			    Parent_View 	@26
+			    location   	(888, 644)
+			    quidu      	"5E67DB28020A"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	338
+			    justify    	0
+			    label      	"Feature Extraction"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@5
+			Focus_Entry 	@15
+			origin     	(464, 688)
+			terminus   	(1312, 688)
+			ordinal    	2)
+		    (object InterMessView "" @28
+			location   	(0, 864)
+			label      	(object SegLabel @29
+			    Parent_View 	@28
+			    location   	(888, 820)
+			    quidu      	"5E67DB3603AA"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	357
+			    justify    	0
+			    label      	"Run SVM Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@6
+			Focus_Entry 	@16
+			origin     	(464, 864)
+			terminus   	(1312, 864)
+			ordinal    	3)
+		    (object InterMessView "" @30
+			location   	(0, 1072)
+			label      	(object SegLabel @31
+			    Parent_View 	@30
+			    location   	(888, 1028)
+			    quidu      	"5E67DB43024A"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	638
+			    justify    	0
+			    label      	"Run Random Forest Tree Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@7
+			Focus_Entry 	@17
+			origin     	(464, 1072)
+			terminus   	(1312, 1072)
+			ordinal    	4)
+		    (object InterMessView "" @32
+			location   	(0, 1216)
+			label      	(object SegLabel @33
+			    Parent_View 	@32
+			    location   	(888, 1172)
+			    quidu      	"5E67DB56025B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	507
+			    justify    	0
+			    label      	"Run Dession Tree Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@8
+			Focus_Entry 	@18
+			origin     	(464, 1216)
+			terminus   	(1312, 1216)
+			ordinal    	5)
+		    (object InterMessView "" @34
+			location   	(0, 1392)
+			label      	(object SegLabel @35
+			    Parent_View 	@34
+			    location   	(888, 1348)
+			    quidu      	"5E67DB66035B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	594
+			    justify    	0
+			    label      	"Run Gradient Boosting Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@9
+			Focus_Entry 	@19
+			origin     	(464, 1392)
+			terminus   	(1312, 1392)
+			ordinal    	6)
+		    (object InterMessView "" @36
+			location   	(0, 1568)
+			label      	(object SegLabel @37
+			    Parent_View 	@36
+			    location   	(888, 1524)
+			    quidu      	"5E67DB7903D2"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	679
+			    justify    	0
+			    label      	"classify Student performance Reason"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@10
+			Focus_Entry 	@20
+			origin     	(464, 1568)
+			terminus   	(1312, 1568)
+			ordinal    	7)
+		    (object InterMessView "" @38
+			location   	(0, 1728)
+			label      	(object SegLabel @39
+			    Parent_View 	@38
+			    location   	(888, 1684)
+			    quidu      	"5E67DBC002DA"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	382
+			    justify    	0
+			    label      	"view Accuracy Graph"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@12
+			Focus_Src  	@11
+			Focus_Entry 	@21
+			origin     	(464, 1728)
+			terminus   	(1312, 1728)
+			ordinal    	8)))
+	    (object ObjectDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5E67DBF100A0"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ObjectView "User" @40
+			location   	(256, 720)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(175, 669)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67DAC200F5"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Application" @41
+			location   	(2576, 720)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@41
+			    location   	(2495, 669)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67DACA030B"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object LinkView "" @42
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DAD70212"
+			client     	@40
+			supplier   	@41
+			line_style 	0)
+		    (object MessView "" @43
+			location   	(1416, 676)
+			line_color 	3342489
+			label      	(object SegLabel @44
+			    Parent_View 	@43
+			    location   	(1416, 256)
+			    quidu      	"5E67DAD70213"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	328
+			    justify    	0
+			    label      	"Upload Dataset"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @45
+			    Parent_View 	@43
+			    location   	(1416, 303)
+			    quidu      	"5E67DAE50302"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	491
+			    justify    	0
+			    label      	"Generate Training Model"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @46
+			    Parent_View 	@43
+			    location   	(1416, 350)
+			    quidu      	"5E67DB28020A"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	388
+			    justify    	0
+			    label      	"Feature Extraction"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @47
+			    Parent_View 	@43
+			    location   	(1416, 397)
+			    quidu      	"5E67DB3603AA"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	406
+			    justify    	0
+			    label      	"Run SVM Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @48
+			    Parent_View 	@43
+			    location   	(1416, 444)
+			    quidu      	"5E67DB43024A"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	688
+			    justify    	0
+			    label      	"Run Random Forest Tree Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @49
+			    Parent_View 	@43
+			    location   	(1416, 491)
+			    quidu      	"5E67DB56025B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	553
+			    justify    	0
+			    label      	"Run Dession Tree Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @50
+			    Parent_View 	@43
+			    location   	(1416, 538)
+			    quidu      	"5E67DB66035B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	641
+			    justify    	0
+			    label      	"Run Gradient Boosting Algorithm"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @51
+			    Parent_View 	@43
+			    location   	(1416, 585)
+			    quidu      	"5E67DB7903D2"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	728
+			    justify    	0
+			    label      	"classify Student performance Reason"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			label      	(object SegLabel @52
+			    Parent_View 	@43
+			    location   	(1416, 632)
+			    quidu      	"5E67DBC002DA"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	428
+			    justify    	0
+			    label      	"view Accuracy Graph"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@42
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1356, 676)
+			terminus   	(1476, 676))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5E67DAAC021C"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5E67DAAC0242"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5E67DAAC021D"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5E67DAAC021F"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5E67DAAC021E"))

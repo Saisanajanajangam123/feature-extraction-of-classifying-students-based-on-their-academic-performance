@@ -1,0 +1,601 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5E67D8DC02A7"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5E67D8DC02A9"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"5E67D8E30254"
+		stereotype 	"Actor")
+	    (object UseCase "upload dataset"
+		quid       	"5E67D8ED0094")
+	    (object UseCase "generate training model"
+		quid       	"5E67D959006B")
+	    (object UseCase "feature Extraction"
+		quid       	"5E67D99101D6")
+	    (object UseCase "run SVM Algorithm"
+		quid       	"5E67D9A103B9")
+	    (object UseCase "run Random Forest Tree Algorithm"
+		quid       	"5E67D9B801AA")
+	    (object UseCase "run Dession Tree Algorithm"
+		quid       	"5E67D9CD01E6")
+	    (object UseCase "run Gradient Boosting Algorithm"
+		quid       	"5E67D9FC02B4")
+	    (object UseCase "classify Student performance Reason"
+		quid       	"5E67DA110302")
+	    (object UseCase "Accurancy Graph"
+		quid       	"5E67DA28017B")
+	    (object Association "$UNNAMED$0"
+		quid       	"5E67DA4002E4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5E67DA42017C"
+			supplier   	"Use Case View::upload dataset"
+			quidu      	"5E67D8ED0094"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5E67DA42017D"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5E67DA450018"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5E67DA470327"
+			supplier   	"Use Case View::generate training model"
+			quidu      	"5E67D959006B"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5E67DA470328"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$6"
+		quid       	"5E67DA4A02FA"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5E67DA4C01A3"
+			supplier   	"Use Case View::feature Extraction"
+			quidu      	"5E67D99101D6"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5E67DA4C01A4"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$9"
+		quid       	"5E67DA4F02DF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5E67DA5101C3"
+			supplier   	"Use Case View::run SVM Algorithm"
+			quidu      	"5E67D9A103B9"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5E67DA5101C4"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$12"
+		quid       	"5E67DA53036E"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"5E67DA55006B"
+			supplier   	"Use Case View::run Random Forest Tree Algorithm"
+			quidu      	"5E67D9B801AA"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"5E67DA55006C"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$15"
+		quid       	"5E67DA570019"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"5E67DA58012B"
+			supplier   	"Use Case View::run Dession Tree Algorithm"
+			quidu      	"5E67D9CD01E6"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"5E67DA58012C"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$18"
+		quid       	"5E67DA5A0257"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"5E67DA65031C"
+			supplier   	"Use Case View::run Gradient Boosting Algorithm"
+			quidu      	"5E67D9FC02B4"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"5E67DA65031D"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$21"
+		quid       	"5E67DA710011"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"5E67DA7202EB"
+			supplier   	"Use Case View::classify Student performance Reason"
+			quidu      	"5E67DA110302"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"5E67DA7202EC"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254")))
+	    (object Association "$UNNAMED$24"
+		quid       	"5E67DA7500BE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"5E67DA760284"
+			supplier   	"Use Case View::Accurancy Graph"
+			quidu      	"5E67DA28017B"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"5E67DA760285"
+			supplier   	"Use Case View::User"
+			quidu      	"5E67D8E30254"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5E67D8DC02C3"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	116
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::upload dataset" @1
+			location   	(1408, 96)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1408, 234)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"upload dataset")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D8ED0094"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::generate training model" @2
+			location   	(1424, 368)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1424, 506)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"generate training model")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D959006B"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::feature Extraction" @3
+			location   	(1440, 656)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1440, 794)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"feature Extraction")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D99101D6"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::run SVM Algorithm" @4
+			location   	(1408, 880)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1408, 1018)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"run SVM Algorithm")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D9A103B9"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::run Random Forest Tree Algorithm" @5
+			location   	(1440, 1136)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(1440, 1274)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"run Random Forest Tree Algorithm")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D9B801AA"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::run Dession Tree Algorithm" @6
+			location   	(1424, 1376)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(1424, 1514)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"run Dession Tree Algorithm")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D9CD01E6"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::run Gradient Boosting Algorithm" @7
+			location   	(1408, 1632)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(1408, 1770)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"run Gradient Boosting Algorithm")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D9FC02B4"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::classify Student performance Reason" @8
+			location   	(1424, 1856)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(1424, 1994)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"classify Student performance Reason")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67DA110302"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::User" @9
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(384, 1264)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(384, 1424)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67D8E30254"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @10
+			location   	(854, 726)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA4002E4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @11
+				Parent_View 	@10
+				location   	(390, -250)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA42017C"
+				client     	@10
+				supplier   	@1
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @12
+				Parent_View 	@10
+				location   	(390, -250)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA42017D"
+				client     	@10
+				supplier   	@9
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @13
+			location   	(839, 871)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA450018"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @14
+				Parent_View 	@13
+				location   	(375, -105)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA470327"
+				client     	@13
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @15
+				Parent_View 	@13
+				location   	(375, -105)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA470328"
+				client     	@13
+				supplier   	@9
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @16
+			location   	(857, 989)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA4A02FA"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @17
+				Parent_View 	@16
+				location   	(393, 13)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA4C01A3"
+				client     	@16
+				supplier   	@3
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @18
+				Parent_View 	@16
+				location   	(393, 13)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA4C01A4"
+				client     	@16
+				supplier   	@9
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @19
+			location   	(836, 1091)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA4F02DF"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @20
+				Parent_View 	@19
+				location   	(372, 115)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA5101C3"
+				client     	@19
+				supplier   	@4
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @21
+				Parent_View 	@19
+				location   	(372, 115)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA5101C4"
+				client     	@19
+				supplier   	@9
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @22
+			location   	(885, 1200)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA53036E"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @23
+				Parent_View 	@22
+				location   	(421, 224)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA55006B"
+				client     	@22
+				supplier   	@5
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @24
+				Parent_View 	@22
+				location   	(421, 224)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA55006C"
+				client     	@22
+				supplier   	@9
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$15" @25
+			location   	(877, 1313)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA570019"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @26
+				Parent_View 	@25
+				location   	(413, 337)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA58012B"
+				client     	@25
+				supplier   	@6
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @27
+				Parent_View 	@25
+				location   	(413, 337)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA58012C"
+				client     	@25
+				supplier   	@9
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$18" @28
+			location   	(869, 1436)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA5A0257"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @29
+				Parent_View 	@28
+				location   	(405, 460)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA65031C"
+				client     	@28
+				supplier   	@7
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @30
+				Parent_View 	@28
+				location   	(405, 460)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA65031D"
+				client     	@28
+				supplier   	@9
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$21" @31
+			location   	(882, 1546)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA710011"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @32
+				Parent_View 	@31
+				location   	(498, 282)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA7202EB"
+				client     	@31
+				supplier   	@8
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @33
+				Parent_View 	@31
+				location   	(498, 282)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA7202EC"
+				client     	@31
+				supplier   	@9
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Accurancy Graph" @34
+			location   	(1472, 2128)
+			label      	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(1472, 2266)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Accurancy Graph")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E67DA28017B"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$24" @35
+			location   	(919, 1689)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E67DA7500BE"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @36
+				Parent_View 	@35
+				location   	(535, 425)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA760284"
+				client     	@35
+				supplier   	@34
+				line_style 	0)
+			    (object RoleView "$UNNAMED$26" @37
+				Parent_View 	@35
+				location   	(535, 425)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E67DA760285"
+				client     	@35
+				supplier   	@9
+				line_style 	0)))))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5E67D8DC02A8"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5E67D8DC02AA"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5E67D8DC02AE"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5E67D8DC02AA"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5E67D8DC02C2"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5E67D8DC02AB"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5E67D8DC02AD"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5E67D8DC02AC"))
